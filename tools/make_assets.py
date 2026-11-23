@@ -39,7 +39,6 @@ SHOTS = {
     "2_thermal_3d.png": "thermal-3d",
     "3_xc_map.png": "xc-map",
     "7_flight_log.png": "flight-log",
-    "8_vario_settings.png": "vario-sound",
 }
 WIDTHS = (360, 720)
 
