@@ -1,14 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Watches and sensors: XC Core</title>
 <meta name="description" content="Which watches and external Bluetooth varios work with XC Core today, and what is still being built.">
 <link rel="canonical" href="https://xccore.uk/watches/">
+<link rel="alternate" hreflang="en" href="https://xccore.uk/watches/">
+<link rel="alternate" hreflang="ar" href="https://xccore.uk/ar/watches/">
+<link rel="alternate" hreflang="x-default" href="https://xccore.uk/watches/">
 <meta name="theme-color" content="#0b1f38">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="XC Core">
+<meta property="og:locale" content="en_GB">
 <meta property="og:title" content="Watches and sensors: XC Core">
 <meta property="og:description" content="Which watches and external Bluetooth varios work with XC Core today, and what is still being built.">
 <meta property="og:url" content="https://xccore.uk/watches/">
@@ -22,13 +26,15 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="lang-hint" id="lang-hint" lang="ar" dir="rtl" hidden><div class="wrap"><span>هذا الموقع متوفر باللغة العربية.</span> <a href="/ar/watches/" hreflang="ar">اعرضه بالعربية</a> <button type="button" data-dismiss>لا، شكرًا</button></div></div>
 <header class="site-header">
 <div class="wrap">
-<a class="brand" href="/"><img src="/assets/img/mark-64.png" width="30" height="32" alt=""><span><span class="xc">XC</span> <span class="core">Core</span></span></a>
-<nav class="site-nav" aria-label="Main">
+<a class="brand" href="/"><img src="/assets/img/mark-64.png" width="28" height="30" alt=""><bdi><span>XC</span> <span class="core">Core</span></bdi></a>
+<nav class="nav-desktop" aria-label="Main">
 <ul>
 <li><a href="/">Home</a></li>
 <li><a href="/features/">Features</a></li>
@@ -37,20 +43,39 @@
 <li><a href="/contact/">Contact</a></li>
 </ul>
 </nav>
+<div class="header-tools">
+<nav class="lang-switch" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a href="/ar/watches/" hreflang="ar" lang="ar">العربية</a></nav>
+<details class="menu">
+<summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg><span>Menu</span></summary>
+<div class="panel">
+<nav aria-label="Main"><ul>
+<li><a href="/">Home</a></li>
+<li><a href="/features/">Features</a></li>
+<li><a href="/watches/" aria-current="page">Watches &amp; sensors</a></li>
+<li><a href="/beta/">Join the beta</a></li>
+<li><a href="/contact/">Contact</a></li>
+</ul></nav>
+<nav class="lang-switch" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a href="/ar/watches/" hreflang="ar" lang="ar">العربية</a></nav>
+</div>
+</details>
+</div>
 </div>
 </header>
 <main id="main">
 <section class="hero small">
+<svg class="thermal" viewBox="0 0 200 420" aria-hidden="true" focusable="false"><g class="ring"><ellipse cx="100" cy="380" rx="78" ry="15"/></g><g class="ring"><ellipse cx="100" cy="318" rx="62" ry="12"/></g><g class="ring"><ellipse cx="100" cy="262" rx="48" ry="10"/></g><g class="ring"><ellipse cx="100" cy="212" rx="36" ry="8"/></g><g class="ring"><ellipse cx="100" cy="170" rx="26" ry="6"/></g><path class="wing" d="M62 104c24-16 52-16 76 0" /></svg>
 <div class="wrap">
-<h1>Watches &amp; sensors</h1>
+<span class="eyebrow">Watches &amp; sensors</span>
+<h1>Your instruments, joined up.</h1>
 <p class="lead">What works with XC Core today, and what is still being built. We only call something ready once it has been tested on real hardware.</p>
 </div>
 </section>
 
 <div class="narrow section">
 
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 7l10 10-5 4V3l5 4L7 17"/></svg></span>
 <h2 id="sensors">External Bluetooth varios</h2>
-<p><span class="status wip">In the app now, in testing</span></p>
+<p><span class="pill">In the app now, in testing</span></p>
 <p>XC Core can use a Bluetooth flight instrument's sensors instead of the phone's: Settings → General → Sensors → External vario. It searches, connects, remembers the instrument and reconnects by itself.</p>
 <ul>
 <li><strong>Bluetooth Low Energy:</strong> the Stodeus UltraBip first, with profiles for XC Tracer, BlueFly and Flymaster.</li>
@@ -62,15 +87,16 @@
 </ul>
 <p class="note">This is built and checked with recorded data; its first test with a real UltraBip is coming up. Other makes count as supported only once they've been tested. If you fly with one, <a href="/contact/">tell us how it works</a>.</p>
 
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6.5" y="6" width="11" height="12" rx="3"/><path d="M9 6l1-3h4l1 3"/><path d="M9 18l1 3h4l1-3"/><path d="M12 9.5V12l1.5 1.5"/></svg></span>
 <h2 id="watches">Watches</h2>
 <p><strong>No XC Core watch app can be installed yet.</strong> They are being built and tested; this is where each one stands.</p>
 <ul class="cards">
-<li class="card"><h3>Wear OS</h3><p><span class="status wip">In testing</span></p><p>The watch app is built and runs on its own on a watch emulator. The link to the phone is in the Google Play version of XC Core, waiting for a test with a real watch before the watch app goes on Google Play.</p></li>
-<li class="card"><h3>Huawei</h3><p><span class="status wip">Waiting for Huawei</span></p><p>Written for both kinds of Huawei watch (the GT, Fit and D2 series, and the HarmonyOS watches). Waiting for Huawei's permission to link the watch to the phone, then a test on a watch.</p></li>
-<li class="card"><h3>Garmin</h3><p><span class="status wip">In development</span></p><p>A Connect IQ app is written; not yet built or tested.</p></li>
-<li class="card"><h3>Apple Watch</h3><p><span class="status no">Later</span></p><p>After the iPhone version.</p></li>
-<li class="card"><h3>Amazfit (Zepp OS)</h3><p><span class="status no">Planned</span></p><p>Not started.</p></li>
-<li class="card"><h3>Coros, Suunto, Polar, Fitbit</h3><p><span class="status no">Not possible</span></p><p>These watches can't run this kind of app for other developers.</p></li>
+<li class="card"><h3>Wear OS</h3><p><span class="pill">In testing</span></p><p>The watch app is built and runs on its own on a watch emulator. The link to the phone is in the Google Play version of XC Core, waiting for a test with a real watch before the watch app goes on Google Play.</p></li>
+<li class="card"><h3>Huawei</h3><p><span class="pill">Waiting for Huawei</span></p><p>Written for both kinds of Huawei watch (the GT, Fit and D2 series, and the HarmonyOS watches). Waiting for Huawei's permission to link the watch to the phone, then a test on a watch.</p></li>
+<li class="card"><h3>Garmin</h3><p><span class="pill">In development</span></p><p>A Connect IQ app is written; not yet built or tested.</p></li>
+<li class="card"><h3>Apple Watch</h3><p><span class="pill no">Later</span></p><p>After the iPhone version.</p></li>
+<li class="card"><h3>Amazfit (Zepp OS)</h3><p><span class="pill no">Planned</span></p><p>Not started.</p></li>
+<li class="card"><h3>Coros, Suunto, Polar, Fitbit</h3><p><span class="pill no">Not possible</span></p><p>These watches can't run this kind of app for other developers.</p></li>
 </ul>
 
 <h3>What the watch apps are designed to do</h3>
@@ -82,6 +108,7 @@
 </ul>
 <p>With the phone, the watch shows your climb, altitude, height, speed and flight time, and buzzes with the phone's warnings. On its own, it can record your track for the flight log. These are design goals until the watch apps are released.</p>
 
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4"/></svg></span>
 <h2 id="phones">Phones</h2>
 <ul>
 <li><strong>Android 7.0 or later</strong>, with GPS. A barometer is strongly recommended; without one the vario works on GPS alone, more slowly.</li>
@@ -94,15 +121,13 @@
 </main>
 <footer class="site-footer">
 <div class="wrap">
+<div class="top">
+<a class="brand" href="/"><img src="/assets/img/mark-64.png" width="28" height="30" alt=""><bdi><span>XC</span> <span class="core">Core</span></bdi></a>
+<nav class="lang-switch" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a href="/ar/watches/" hreflang="ar" lang="ar">العربية</a></nav>
+</div>
 <p class="safety">XC Core is a flight aid, not a certified instrument. Its readings and suggestions can be wrong: keep watch outside, fly within your skills and make your own decisions.</p>
-<ul>
-<li><a href="/features/">Features</a></li>
-<li><a href="/watches/">Watches &amp; sensors</a></li>
-<li><a href="/beta/">Join the beta</a></li>
-<li><a href="/privacy/">Privacy policy and terms</a></li>
-<li><a href="/contact/">Contact</a></li>
-</ul>
-<p class="fine">© 2026 Tarek Lasheen. No cookies, no analytics, no trackers on this site. Google Play and the Google Play logo are trademarks of Google LLC. Sora font: SIL Open Font Licence. Map images in the screenshots: © OpenStreetMap contributors, SRTM, OpenTopoMap (CC-BY-SA).</p>
+<ul><li><a href="/features/">Features</a></li><li><a href="/watches/">Watches &amp; sensors</a></li><li><a href="/beta/">Join the beta</a></li><li><a href="/contact/">Contact</a></li><li><a href="/privacy/">Privacy policy and terms</a></li></ul>
+<p class="fine">© 2026 Tarek Lasheen. No cookies, no analytics, no trackers on this site. Google Play and the Google Play logo are trademarks of Google LLC. Fonts: Sora and Cairo (SIL Open Font Licence). Map images in the screenshots: © OpenStreetMap contributors, SRTM, OpenTopoMap (CC-BY-SA).</p>
 </div>
 </footer>
 </body>

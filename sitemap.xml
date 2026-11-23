@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://xccore.uk/</loc></url>
-  <url><loc>https://xccore.uk/features/</loc></url>
-  <url><loc>https://xccore.uk/watches/</loc></url>
-  <url><loc>https://xccore.uk/beta/</loc></url>
-  <url><loc>https://xccore.uk/privacy/</loc></url>
-  <url><loc>https://xccore.uk/contact/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://xccore.uk/</loc><xhtml:link rel="alternate" hreflang="en" href="https://xccore.uk/"/><xhtml:link rel="alternate" hreflang="ar" href="https://xccore.uk/ar/"/></url>
+  <url><loc>https://xccore.uk/ar/</loc><xhtml:link rel="alternate" hreflang="en" href="https://xccore.uk/"/><xhtml:link rel="alternate" hreflang="ar" href="https://xccore.uk/ar/"/></url>
+  <url><loc>https://xccore.uk/features/</loc><xhtml:link rel="alternate" hreflang="en" href="https://xccore.uk/features/"/><xhtml:link rel="alternate" hreflang="ar" href="https://xccore.uk/ar/features/"/></url>
+  <url><loc>https://xccore.uk/ar/features/</loc><xhtml:link rel="alternate" hreflang="en" href="https://xccore.uk/features/"/><xhtml:link rel="alternate" hreflang="ar" href="https://xccore.uk/ar/features/"/></url>
+  <url><loc>https://xccore.uk/watches/</loc><xhtml:link rel="alternate" hreflang="en" href="https://xccore.uk/watches/"/><xhtml:link rel="alternate" hreflang="ar" href="https://xccore.uk/ar/watches/"/></url>
+  <url><loc>https://xccore.uk/ar/watches/</loc><xhtml:link rel="alternate" hreflang="en" href="https://xccore.uk/watches/"/><xhtml:link rel="alternate" hreflang="ar" href="https://xccore.uk/ar/watches/"/></url>
+  <url><loc>https://xccore.uk/beta/</loc><xhtml:link rel="alternate" hreflang="en" href="https://xccore.uk/beta/"/><xhtml:link rel="alternate" hreflang="ar" href="https://xccore.uk/ar/beta/"/></url>
+  <url><loc>https://xccore.uk/ar/beta/</loc><xhtml:link rel="alternate" hreflang="en" href="https://xccore.uk/beta/"/><xhtml:link rel="alternate" hreflang="ar" href="https://xccore.uk/ar/beta/"/></url>
+  <url><loc>https://xccore.uk/contact/</loc><xhtml:link rel="alternate" hreflang="en" href="https://xccore.uk/contact/"/><xhtml:link rel="alternate" hreflang="ar" href="https://xccore.uk/ar/contact/"/></url>
+  <url><loc>https://xccore.uk/ar/contact/</loc><xhtml:link rel="alternate" hreflang="en" href="https://xccore.uk/contact/"/><xhtml:link rel="alternate" hreflang="ar" href="https://xccore.uk/ar/contact/"/></url>
+  <url><loc>https://xccore.uk/privacy/</loc><xhtml:link rel="alternate" hreflang="en" href="https://xccore.uk/privacy/"/><xhtml:link rel="alternate" hreflang="ar" href="https://xccore.uk/ar/privacy/"/></url>
+  <url><loc>https://xccore.uk/ar/privacy/</loc><xhtml:link rel="alternate" hreflang="en" href="https://xccore.uk/privacy/"/><xhtml:link rel="alternate" hreflang="ar" href="https://xccore.uk/ar/privacy/"/></url>
 </urlset>

@@ -1,14 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Features: XC Core</title>
 <meta name="description" content="Four flight modes, a voice thermal coach, a 3D thermal view, waypoint routes, offline maps and terrain, IGC logging and XContest, PPG mode and screen-off flying.">
 <link rel="canonical" href="https://xccore.uk/features/">
+<link rel="alternate" hreflang="en" href="https://xccore.uk/features/">
+<link rel="alternate" hreflang="ar" href="https://xccore.uk/ar/features/">
+<link rel="alternate" hreflang="x-default" href="https://xccore.uk/features/">
 <meta name="theme-color" content="#0b1f38">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="XC Core">
+<meta property="og:locale" content="en_GB">
 <meta property="og:title" content="Features: XC Core">
 <meta property="og:description" content="Four flight modes, a voice thermal coach, a 3D thermal view, waypoint routes, offline maps and terrain, IGC logging and XContest, PPG mode and screen-off flying.">
 <meta property="og:url" content="https://xccore.uk/features/">
@@ -22,13 +26,15 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="lang-hint" id="lang-hint" lang="ar" dir="rtl" hidden><div class="wrap"><span>هذا الموقع متوفر باللغة العربية.</span> <a href="/ar/features/" hreflang="ar">اعرضه بالعربية</a> <button type="button" data-dismiss>لا، شكرًا</button></div></div>
 <header class="site-header">
 <div class="wrap">
-<a class="brand" href="/"><img src="/assets/img/mark-64.png" width="30" height="32" alt=""><span><span class="xc">XC</span> <span class="core">Core</span></span></a>
-<nav class="site-nav" aria-label="Main">
+<a class="brand" href="/"><img src="/assets/img/mark-64.png" width="28" height="30" alt=""><bdi><span>XC</span> <span class="core">Core</span></bdi></a>
+<nav class="nav-desktop" aria-label="Main">
 <ul>
 <li><a href="/">Home</a></li>
 <li><a href="/features/" aria-current="page">Features</a></li>
@@ -37,140 +43,172 @@
 <li><a href="/contact/">Contact</a></li>
 </ul>
 </nav>
+<div class="header-tools">
+<nav class="lang-switch" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a href="/ar/features/" hreflang="ar" lang="ar">العربية</a></nav>
+<details class="menu">
+<summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg><span>Menu</span></summary>
+<div class="panel">
+<nav aria-label="Main"><ul>
+<li><a href="/">Home</a></li>
+<li><a href="/features/" aria-current="page">Features</a></li>
+<li><a href="/watches/">Watches &amp; sensors</a></li>
+<li><a href="/beta/">Join the beta</a></li>
+<li><a href="/contact/">Contact</a></li>
+</ul></nav>
+<nav class="lang-switch" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a href="/ar/features/" hreflang="ar" lang="ar">العربية</a></nav>
+</div>
+</details>
+</div>
 </div>
 </header>
 <main id="main">
 <section class="hero small">
+<svg class="thermal" viewBox="0 0 200 420" aria-hidden="true" focusable="false"><g class="ring"><ellipse cx="100" cy="380" rx="78" ry="15"/></g><g class="ring"><ellipse cx="100" cy="318" rx="62" ry="12"/></g><g class="ring"><ellipse cx="100" cy="262" rx="48" ry="10"/></g><g class="ring"><ellipse cx="100" cy="212" rx="36" ry="8"/></g><g class="ring"><ellipse cx="100" cy="170" rx="26" ry="6"/></g><path class="wing" d="M62 104c24-16 52-16 76 0" /></svg>
 <div class="wrap">
-<h1>Features</h1>
-<p class="lead">Everything here is in the Android beta today. The app and its voice are in English.</p>
+<span class="eyebrow">Features</span>
+<h1>Everything you need in the air.</h1>
+<p class="lead">All of it is in the Android beta today. The app and its voice are in English.</p>
 </div>
 </section>
 
 <div class="wrap section">
 
-<section class="feature" id="modes">
+<section class="feature reveal" id="modes">
 <div>
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg></span>
 <h2>Four flight modes</h2>
-<p>XC Core asks how you want to fly each time you open it, and remembers your last choice.</p>
+<p class="lead">Pick how you fly each time you open the app. It remembers your last choice.</p>
 <ul>
-<li><strong>Speed:</strong> large height above ground, ground speed and heading, with no map. A turbulence bar, and a low-height alarm (a tone, words and a red flashing edge) at a height you set.</li>
-<li><strong>Soaring:</strong> a live lift line ahead of you, green for lift and red for sink, built from your earlier passes along the ridge. It's kept for each site and fades with age. A wind arrow, and a Thermal button for the 3D view.</li>
-<li><strong>XC:</strong> the map while gliding, the 3D thermal view when you circle, the voice coach, and a thermal compass pointing to the best or nearest thermal you can reach, with its distance and your arrival height.</li>
-<li><strong>PPG:</strong> for paramotor pilots (see below).</li>
+<li><strong>Speed:</strong> big height above ground, speed and heading, no map. A turbulence bar and a low-height alarm: a tone, words and a red flashing edge.</li>
+<li><strong>Soaring:</strong> a live lift line ahead, green for lift and red for sink, built from your earlier passes. Kept for each site.</li>
+<li><strong>XC:</strong> the map on the glide, the 3D view in the climb, the voice coach and a thermal compass.</li>
+<li><strong>PPG:</strong> for paramotor pilots (below).</li>
 </ul>
-<p>The flight screen is yours to arrange: on the ground, move, resize, add or remove widgets for each mode, and share a layout as a file.</p>
+<p>Move, resize, add or remove widgets on the ground for each mode, and share a layout as a file.</p>
 </div>
-<picture><source type="image/webp" srcset="/assets/img/store-modes-360.webp 360w, /assets/img/store-modes-720.webp 720w" sizes="(min-width: 760px) 280px, 70vw"><img src="/assets/img/store-modes-720.jpg" srcset="/assets/img/store-modes-360.jpg 360w, /assets/img/store-modes-720.jpg 720w" sizes="(min-width: 760px) 280px, 70vw" width="720" height="1280" alt="The mode screen: Speed, Soaring, XC and PPG" loading="lazy" decoding="async"></picture>
+<div class="phone-wrap"><div class="phone"><picture><source type="image/webp" srcset="/assets/img/modes-320.webp 320w, /assets/img/modes-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/modes-640.jpg" srcset="/assets/img/modes-320.jpg 320w, /assets/img/modes-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="The mode screen: Speed, Soaring, XC and PPG" loading="lazy" decoding="async"></picture></div></div>
 </section>
 
-<section class="feature flip" id="coach">
+<section class="feature flip reveal" id="coach">
 <div>
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M18.5 6.5a7.5 7.5 0 0 1 0 11"/></svg></span>
 <h2>Voice thermal coach</h2>
-<p>As soon as you start circling, XC Core maps the lift around your circle and tells you what to do, at the moment to act: <em>"Open up"</em>, <em>"Tighten"</em>, <em>"Straighten now"</em>, or <em>"Centred, hold it"</em>. It never gives the opposite correction within the same circle.</p>
-<p>On a glide it notices lift (<em>"Thermal here, turn right"</em>) and guides you back to the best thermal of the flight that you can still reach, corrected for wind drift: <em>"Thermal, 800 metres, at 2 o'clock."</em></p>
+<p class="lead">Start circling and XC Core maps the lift around you, then says what to do: <em>“Open up”</em>, <em>“Tighten”</em>, <em>“Straighten now”</em> or <em>“Centred, hold it.”</em></p>
+<p>Never the opposite correction within one circle. On a glide it notices lift (<em>“Thermal here, turn right”</em>) and leads you back to the best thermal you can still reach, corrected for drift: <em>“Thermal, 800 metres, at 2 o'clock.”</em></p>
 <ul>
-<li>Choose how much it says (Quiet, Normal or Coach) and how often (Low, Medium or High).</li>
-<li>Separate volumes for a headset and the speaker, switched by itself. If the headset drops out, it says so and carries on through the speaker.</li>
-<li>Uses your phone's own speech engine, and checks that an offline English voice is installed.</li>
+<li>How much it says (Quiet, Normal, Coach) and how often (Low, Medium, High).</li>
+<li>Separate volumes for headset and speaker, switched by itself. Headset drops out? It says so and carries on.</li>
+<li>Your phone's own speech engine, with a check for an offline English voice.</li>
 </ul>
 </div>
-<picture><source type="image/webp" srcset="/assets/img/store-voice-360.webp 360w, /assets/img/store-voice-720.webp 720w" sizes="(min-width: 760px) 280px, 70vw"><img src="/assets/img/store-voice-720.jpg" srcset="/assets/img/store-voice-360.jpg 360w, /assets/img/store-voice-720.jpg 720w" sizes="(min-width: 760px) 280px, 70vw" width="720" height="1280" alt="XC mode on the map, asking whether a headset is used today" loading="lazy" decoding="async"></picture>
+<div class="phone-wrap"><div class="phone"><picture><source type="image/webp" srcset="/assets/img/thermal-3d-320.webp 320w, /assets/img/thermal-3d-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/thermal-3d-640.jpg" srcset="/assets/img/thermal-3d-320.jpg 320w, /assets/img/thermal-3d-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="Circling in the 3D view, with the core marked at plus 2 metres a second" loading="lazy" decoding="async"></picture></div></div>
 </section>
 
-<section class="feature" id="thermal-3d">
+<section class="feature reveal" id="thermal-3d">
 <div>
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="12" cy="19" rx="8" ry="2.2"/><ellipse cx="12" cy="13.5" rx="5.5" ry="1.7"/><ellipse cx="12" cy="8.8" rx="3.4" ry="1.2"/><path d="M8 4.5c2.5-1.4 5.5-1.4 8 0"/></svg></span>
 <h2>3D thermal view</h2>
-<p>A chase view from behind your wing shows the circles you've flown, coloured by climb, the estimated core at your height and which way the thermal drifts. A wind estimate from your circling is shown with its uncertainty, and hidden when it isn't reliable.</p>
-<p>In XC mode it opens by itself when you circle; in Soaring mode, tap Thermal.</p>
+<p class="lead">See the thermal you're in: your circles coloured by climb, the core at your height and which way it drifts.</p>
+<p>A wind estimate from your circling, shown with its uncertainty and hidden when it isn't reliable. In XC mode it opens by itself when you circle; in Soaring mode, tap Thermal.</p>
 </div>
-<picture><source type="image/webp" srcset="/assets/img/app-thermal-3d-360.webp 360w, /assets/img/app-thermal-3d-720.webp 720w" sizes="(min-width: 760px) 280px, 70vw"><img src="/assets/img/app-thermal-3d-720.jpg" srcset="/assets/img/app-thermal-3d-360.jpg 360w, /assets/img/app-thermal-3d-720.jpg 720w" sizes="(min-width: 760px) 280px, 70vw" width="720" height="1440" alt="The 3D thermal view: circles coloured by climb, the core, and the wind" loading="lazy" decoding="async"></picture>
+<div class="phone-wrap"><div class="phone"><picture><source type="image/webp" srcset="/assets/img/thermal-3d-320.webp 320w, /assets/img/thermal-3d-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/thermal-3d-640.jpg" srcset="/assets/img/thermal-3d-320.jpg 320w, /assets/img/thermal-3d-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="The 3D thermal view: circles coloured by climb, the core and the wind" loading="lazy" decoding="async"></picture></div></div>
 </section>
 
-<section class="feature flip" id="routes">
+<section class="feature flip reveal" id="routes">
 <div>
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 21V4"/><path d="M5 4h11l-2 3.5 2 3.5H5"/><circle cx="18" cy="19" r="2"/><path d="M8 19h8"/></svg></span>
 <h2>Waypoint routes and the route badge</h2>
 <ul>
-<li>Type or paste waypoints (degrees and minutes, decimal degrees or a Google Maps link), or hold the map to drop them. Drag, rename, reorder, undo, and save routes by name.</li>
+<li>Type or paste waypoints (degrees and minutes, decimal, or a Google Maps link), or hold the map to drop one. Drag, rename, reorder, undo; save routes by name.</li>
 <li>A waypoint compass beside the thermal compass, in any mode.</li>
-<li>The voice counts you in from 100 metres: <em>"Waypoint 1 reached. Next: Goal, at 2 o'clock."</em></li>
+<li>The voice counts you in from 100 metres: <em>“Waypoint 1 reached. Next: Goal, at 2 o'clock.”</em></li>
 <li>Reached waypoints go into the IGC file.</li>
-<li>After landing, a route badge with your times, square or story-sized, to share or save. "Hide positions and map" keeps your spots private.</li>
+<li>After landing, a route badge with your times, square or story-sized. “Hide positions and map” keeps your spots private.</li>
 </ul>
 </div>
-<picture><source type="image/webp" srcset="/assets/img/store-route-360.webp 360w, /assets/img/store-route-720.webp 720w" sizes="(min-width: 760px) 280px, 70vw"><img src="/assets/img/store-route-720.jpg" srcset="/assets/img/store-route-360.jpg 360w, /assets/img/store-route-720.jpg 720w" sizes="(min-width: 760px) 280px, 70vw" width="720" height="1280" alt="A route on the topographic map with the distance to the next waypoint" loading="lazy" decoding="async"></picture>
+<div class="phone-wrap"><div class="phone"><picture><source type="image/webp" srcset="/assets/img/badge-320.webp 320w, /assets/img/badge-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/badge-640.jpg" srcset="/assets/img/badge-320.jpg 320w, /assets/img/badge-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="The route complete badge with the waypoint times" loading="lazy" decoding="async"></picture></div></div>
 </section>
 
-<section class="feature" id="maps">
+<section class="feature reveal" id="maps">
 <div>
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14"/><path d="M15 6v14"/></svg></span>
 <h2>Offline maps and terrain</h2>
-<p>Topographic maps (OpenTopoMap) and OpenStreetMap. Download a region before you go, with its size shown, and the map works with no signal.</p>
-<p>Terrain heights (SRTM) download by themselves for the area you're in, so height above ground keeps working offline; where there's no terrain, the app shows height above takeoff and says so. The thermal compass uses terrain to judge which thermals you can reach.</p>
+<p class="lead">Topographic maps that work with no signal.</p>
+<p>OpenTopoMap and OpenStreetMap: download a region before you go, its size shown first. Terrain heights (SRTM) download by themselves where you are, so height above ground works offline, and the thermal compass knows which thermals you can reach.</p>
 </div>
-<picture><source type="image/webp" srcset="/assets/img/app-xc-map-360.webp 360w, /assets/img/app-xc-map-720.webp 720w" sizes="(min-width: 760px) 280px, 70vw"><img src="/assets/img/app-xc-map-720.jpg" srcset="/assets/img/app-xc-map-360.jpg 360w, /assets/img/app-xc-map-720.jpg 720w" sizes="(min-width: 760px) 280px, 70vw" width="720" height="1440" alt="XC mode on the topographic map with the thermal compass pointing to a thermal" loading="lazy" decoding="async"></picture>
+<div class="phone-wrap"><div class="phone"><picture><source type="image/webp" srcset="/assets/img/xc-map-320.webp 320w, /assets/img/xc-map-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/xc-map-640.jpg" srcset="/assets/img/xc-map-320.jpg 320w, /assets/img/xc-map-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="XC mode gliding on the topographic map with the thermal compass" loading="lazy" decoding="async"></picture></div></div>
 </section>
 
-<section class="feature flip" id="igc">
+<section class="feature flip reveal" id="igc">
 <div>
-<h2>IGC logging and XContest</h2>
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/><path d="M9 17l2.5-3 2 2 3-4"/></svg></span>
+<h2>IGC logging and direct XContest claims</h2>
+<p class="lead">Claim your flights on XContest straight from the app. Log in once, tap Claim.</p>
 <ul>
-<li>Takeoff and landing are detected by themselves, or tap Start flight. A drive or a cable car doesn't start a flight, and ridge soaring doesn't end one.</li>
-<li>Every flight is saved as a detailed IGC file, written the way a dedicated logger writes it: the full header, GPS and pressure altitude, one fix a second.</li>
-<li>A flight log with totals, the track coloured by climb, an altitude graph and replay. Export KML for Google Earth.</li>
-<li>Claim a flight on XContest straight from the app, or share the IGC file.</li>
+<li>Takeoff and landing found by themselves, or tap Start flight. A drive or a cable car doesn't start a flight; ridge soaring doesn't end one.</li>
+<li>Every flight saved as a full IGC file, the way a dedicated logger writes it: full header, GPS and pressure altitude, one fix a second.</li>
+<li>A flight log with totals, the track coloured by climb, an altitude graph and replay. KML export for Google Earth.</li>
 <li>Replay any IGC file through the whole app, with sound, coach and 3D view.</li>
 </ul>
-<p class="note">XC Core's IGC files aren't signed yet (no G record), so XContest accepts them but scores them at 0 points.</p>
+<p class="note">XC Core's IGC files aren't signed yet (no G record), so XContest accepts them but scores them at 0 points for now.</p>
 </div>
-<picture><source type="image/webp" srcset="/assets/img/app-flight-log-360.webp 360w, /assets/img/app-flight-log-720.webp 720w" sizes="(min-width: 760px) 280px, 70vw"><img src="/assets/img/app-flight-log-720.jpg" srcset="/assets/img/app-flight-log-360.jpg 360w, /assets/img/app-flight-log-720.jpg 720w" sizes="(min-width: 760px) 280px, 70vw" width="720" height="1440" alt="The flight log with each flight&#x27;s time, height, climb and distance" loading="lazy" decoding="async"></picture>
+<div class="phone-wrap"><div class="phone"><picture><source type="image/webp" srcset="/assets/img/flight-log-320.webp 320w, /assets/img/flight-log-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/flight-log-640.jpg" srcset="/assets/img/flight-log-320.jpg 320w, /assets/img/flight-log-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="The flight log with each flight&#x27;s time, height, climb and distance" loading="lazy" decoding="async"></picture></div></div>
 </section>
 
-<section class="feature" id="ppg">
+<section class="feature reveal" id="ppg">
 <div>
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="2"/><path d="M12 10c-1-4-.5-6.5 1.5-7 1.5 2 .5 4.5-1.5 7"/><path d="M13.7 13.2c3.8 1.7 5.6 3.7 4.9 5.6-2.4.2-4.3-1.9-4.9-5.6"/><path d="M10.3 13.2c-3.1 2.8-5.6 3.6-7 2.1 1-2.2 3.9-2.8 7-2.1"/><circle cx="12" cy="12" r="9.5"/></svg></span>
 <h2>PPG mode</h2>
-<p>Climb, ground speed, altitude, flight time and the clock in large numbers, and nothing else: no map, no 3D view, no coach. The climb rate is held steady through engine vibration, and a running engine or taxiing doesn't start a flight. Large buttons.Your paramotor and engine hours go into your pilot details.</p>
+<p class="lead">Climb, speed, altitude, flight time and the clock. Big. Nothing else.</p>
+<p>No map, no 3D view, no coach. The climb rate stays steady through engine vibration, and a running engine or taxiing doesn't start a flight. Large buttons. Your paramotor and engine hours go into your pilot details.</p>
 </div>
-<picture><source type="image/webp" srcset="/assets/img/store-ppg-360.webp 360w, /assets/img/store-ppg-720.webp 720w" sizes="(min-width: 760px) 280px, 70vw"><img src="/assets/img/store-ppg-720.jpg" srcset="/assets/img/store-ppg-360.jpg 360w, /assets/img/store-ppg-720.jpg 720w" sizes="(min-width: 760px) 280px, 70vw" width="720" height="1280" alt="PPG mode with climb, speed, altitude, flight time and clock" loading="lazy" decoding="async"></picture>
+<div class="phone-wrap"><div class="phone"><picture><source type="image/webp" srcset="/assets/img/ppg-320.webp 320w, /assets/img/ppg-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/ppg-640.jpg" srcset="/assets/img/ppg-320.jpg 320w, /assets/img/ppg-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="PPG mode with climb, speed, altitude, flight time and clock" loading="lazy" decoding="async"></picture></div></div>
 </section>
 
-<section class="feature flip" id="screen-off">
+<section class="feature flip reveal" id="screen-off">
 <div>
+<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4"/><path d="M9.5 9.5a3.5 3.5 0 0 1 5 0"/><path d="M8 7.5a6 6 0 0 1 8 0"/></svg></span>
 <h2>Made for the air, screen off</h2>
 <ul>
-<li>The vario, voice, GPS and recording keep running with the screen off or the phone locked in your pocket.</li>
+<li>Vario, voice, GPS and recording keep running with the screen off or the phone locked.</li>
 <li>Headset button: one press reads your status, two repeat the last call.</li>
 <li>Spoken warnings, each with its own tone: low height, strong sink, GPS lost, barometer failure, low battery, phone too hot, headset lost.</li>
-<li>Brightness and Do Not Disturb set for the flight, and put back after landing.</li>
-<li>The vario stays quiet on the ground until your flight starts; set exactly where the climb beep and sink tone begin.</li>
+<li>Brightness and Do Not Disturb set for the flight, put back after landing.</li>
+<li>Quiet on the ground until your flight starts. Set exactly where the climb beep and sink tone begin.</li>
 </ul>
 </div>
-<picture><source type="image/webp" srcset="/assets/img/store-speed-360.webp 360w, /assets/img/store-speed-720.webp 720w" sizes="(min-width: 760px) 280px, 70vw"><img src="/assets/img/store-speed-720.jpg" srcset="/assets/img/store-speed-360.jpg 360w, /assets/img/store-speed-720.jpg 720w" sizes="(min-width: 760px) 280px, 70vw" width="720" height="1280" alt="Speed mode recording a flight, with large height, speed and heading" loading="lazy" decoding="async"></picture>
+<div class="phone-wrap"><div class="phone"><picture><source type="image/webp" srcset="/assets/img/vario-settings-320.webp 320w, /assets/img/vario-settings-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/vario-settings-640.jpg" srcset="/assets/img/vario-settings-320.jpg 320w, /assets/img/vario-settings-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="The vario and sound settings: where the climb beeps and the sink tone start" loading="lazy" decoding="async"></picture></div></div>
 </section>
 
 <section class="section" id="more">
-<h2>And more</h2>
-<ul class="cards">
-<li class="card"><h3>A real variometer</h3><p>Barometer, GPS and accelerometer combined, so the vario reacts to lift at once. Calibrated to sea level by itself; set QNH by hand if you prefer. Works on GPS alone on phones without a barometer.</p></li>
-<li class="card"><h3>External Bluetooth varios</h3><p>Use the sensors of a Bluetooth vario such as the Stodeus UltraBip. See <a href="/watches/">watches and sensors</a>.</p></li>
-<li class="card"><h3>Sensors and permissions</h3><p>A table of your phone's sensors and how good they are, a permissions page, and import or export of all your settings.</p></li>
-<li class="card"><h3>Free</h3><p>No ads and no purchases. XC mode is free for a limited time.</p></li>
+<h2 class="reveal">And more</h2>
+<ul class="cards reveal">
+<li class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 17l5-5 4 3 8-9"/><path d="M15 6h5v5"/></svg></span><h3>A real variometer</h3><p>Barometer, GPS and accelerometer combined, so it reacts to lift at once. Calibrated to sea level by itself, or set QNH. Works on GPS alone on phones without a barometer.</p></li>
+<li class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 7l10 10-5 4V3l5 4L7 17"/></svg></span><h3>External Bluetooth varios</h3><p>Use a Bluetooth vario's sensors, such as the Stodeus UltraBip. See <a href="/watches/">watches and sensors</a>.</p></li>
+<li class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18.5h4"/></svg></span><h3>Sensors and permissions</h3><p>A table of your phone's sensors and how good they are, a permissions page, and import or export of all your settings.</p></li>
+<li class="card"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="9" width="17" height="11" rx="1.5"/><path d="M12 9v11"/><path d="M3.5 13h17"/><path d="M12 9c-1.5-3-5-3.5-5-1.5S10 9 12 9zm0 0c1.5-3 5-3.5 5-1.5S14 9 12 9z"/></svg></span><h3>Free</h3><p>No ads and no purchases. XC mode is free for a limited time.</p></li>
 </ul>
 </section>
 
 </div>
+
+<section class="section alt topo">
+<div class="section-head center wrap">
+<h2>See it on screen</h2>
+</div>
+<div class="carousel" data-carousel><ul class="track" aria-roledescription="carousel" aria-label="Screenshots of XC Core" tabindex="0"><li class="slide" id="feature-shots-1" aria-roledescription="slide" aria-label="Screenshot 1 of 8"><figure><div class="phone"><picture><source type="image/webp" srcset="/assets/img/modes-320.webp 320w, /assets/img/modes-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/modes-640.jpg" srcset="/assets/img/modes-320.jpg 320w, /assets/img/modes-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="The mode screen: Speed, Soaring, XC and PPG" loading="lazy" decoding="async"></picture></div><figcaption>Four flight modes</figcaption></figure></li><li class="slide" id="feature-shots-2" aria-roledescription="slide" aria-label="Screenshot 2 of 8"><figure><div class="phone"><picture><source type="image/webp" srcset="/assets/img/thermal-3d-320.webp 320w, /assets/img/thermal-3d-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/thermal-3d-640.jpg" srcset="/assets/img/thermal-3d-320.jpg 320w, /assets/img/thermal-3d-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="The 3D thermal view: circles coloured by climb, the core and the wind" loading="lazy" decoding="async"></picture></div><figcaption>3D thermal view</figcaption></figure></li><li class="slide" id="feature-shots-3" aria-roledescription="slide" aria-label="Screenshot 3 of 8"><figure><div class="phone"><picture><source type="image/webp" srcset="/assets/img/xc-map-320.webp 320w, /assets/img/xc-map-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/xc-map-640.jpg" srcset="/assets/img/xc-map-320.jpg 320w, /assets/img/xc-map-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="XC mode gliding on the topographic map with the thermal compass" loading="lazy" decoding="async"></picture></div><figcaption>XC map and thermal compass</figcaption></figure></li><li class="slide" id="feature-shots-4" aria-roledescription="slide" aria-label="Screenshot 4 of 8"><figure><div class="phone"><picture><source type="image/webp" srcset="/assets/img/wp-reached-320.webp 320w, /assets/img/wp-reached-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/wp-reached-640.jpg" srcset="/assets/img/wp-reached-320.jpg 320w, /assets/img/wp-reached-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="The waypoint reached card over the map" loading="lazy" decoding="async"></picture></div><figcaption>Waypoint reached</figcaption></figure></li><li class="slide" id="feature-shots-5" aria-roledescription="slide" aria-label="Screenshot 5 of 8"><figure><div class="phone"><picture><source type="image/webp" srcset="/assets/img/badge-320.webp 320w, /assets/img/badge-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/badge-640.jpg" srcset="/assets/img/badge-320.jpg 320w, /assets/img/badge-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="The route complete badge with the waypoint times" loading="lazy" decoding="async"></picture></div><figcaption>Route badge</figcaption></figure></li><li class="slide" id="feature-shots-6" aria-roledescription="slide" aria-label="Screenshot 6 of 8"><figure><div class="phone"><picture><source type="image/webp" srcset="/assets/img/ppg-320.webp 320w, /assets/img/ppg-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/ppg-640.jpg" srcset="/assets/img/ppg-320.jpg 320w, /assets/img/ppg-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="PPG mode with large numbers" loading="lazy" decoding="async"></picture></div><figcaption>PPG mode</figcaption></figure></li><li class="slide" id="feature-shots-7" aria-roledescription="slide" aria-label="Screenshot 7 of 8"><figure><div class="phone"><picture><source type="image/webp" srcset="/assets/img/flight-log-320.webp 320w, /assets/img/flight-log-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/flight-log-640.jpg" srcset="/assets/img/flight-log-320.jpg 320w, /assets/img/flight-log-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="The flight log" loading="lazy" decoding="async"></picture></div><figcaption>Flight log</figcaption></figure></li><li class="slide" id="feature-shots-8" aria-roledescription="slide" aria-label="Screenshot 8 of 8"><figure><div class="phone"><picture><source type="image/webp" srcset="/assets/img/vario-settings-320.webp 320w, /assets/img/vario-settings-640.webp 640w" sizes="(min-width: 900px) 300px, 74vw"><img src="/assets/img/vario-settings-640.jpg" srcset="/assets/img/vario-settings-320.jpg 320w, /assets/img/vario-settings-640.jpg 640w" sizes="(min-width: 900px) 300px, 74vw" width="640" height="1138" alt="The vario and sound settings" loading="lazy" decoding="async"></picture></div><figcaption>Vario and sound</figcaption></figure></li></ul><div class="carousel-nav"><button class="arrow prev" type="button" aria-label="Previous" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6"/></svg></button><ol class="dots"><li><a href="#feature-shots-1" aria-label="Screenshot 1 of 8" aria-current="true"></a></li><li><a href="#feature-shots-2" aria-label="Screenshot 2 of 8"></a></li><li><a href="#feature-shots-3" aria-label="Screenshot 3 of 8"></a></li><li><a href="#feature-shots-4" aria-label="Screenshot 4 of 8"></a></li><li><a href="#feature-shots-5" aria-label="Screenshot 5 of 8"></a></li><li><a href="#feature-shots-6" aria-label="Screenshot 6 of 8"></a></li><li><a href="#feature-shots-7" aria-label="Screenshot 7 of 8"></a></li><li><a href="#feature-shots-8" aria-label="Screenshot 8 of 8"></a></li></ol><button class="arrow next" type="button" aria-label="Next" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></button></div><p class="center"><button class="pause" type="button" hidden data-pause="Pause" data-play="Play">Pause</button></p></div>
+</section>
 
 </main>
 <footer class="site-footer">
 <div class="wrap">
+<div class="top">
+<a class="brand" href="/"><img src="/assets/img/mark-64.png" width="28" height="30" alt=""><bdi><span>XC</span> <span class="core">Core</span></bdi></a>
+<nav class="lang-switch" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a href="/ar/features/" hreflang="ar" lang="ar">العربية</a></nav>
+</div>
 <p class="safety">XC Core is a flight aid, not a certified instrument. Its readings and suggestions can be wrong: keep watch outside, fly within your skills and make your own decisions.</p>
-<ul>
-<li><a href="/features/">Features</a></li>
-<li><a href="/watches/">Watches &amp; sensors</a></li>
-<li><a href="/beta/">Join the beta</a></li>
-<li><a href="/privacy/">Privacy policy and terms</a></li>
-<li><a href="/contact/">Contact</a></li>
-</ul>
-<p class="fine">© 2026 Tarek Lasheen. No cookies, no analytics, no trackers on this site. Google Play and the Google Play logo are trademarks of Google LLC. Sora font: SIL Open Font Licence. Map images in the screenshots: © OpenStreetMap contributors, SRTM, OpenTopoMap (CC-BY-SA).</p>
+<ul><li><a href="/features/">Features</a></li><li><a href="/watches/">Watches &amp; sensors</a></li><li><a href="/beta/">Join the beta</a></li><li><a href="/contact/">Contact</a></li><li><a href="/privacy/">Privacy policy and terms</a></li></ul>
+<p class="fine">© 2026 Tarek Lasheen. No cookies, no analytics, no trackers on this site. Google Play and the Google Play logo are trademarks of Google LLC. Fonts: Sora and Cairo (SIL Open Font Licence). Map images in the screenshots: © OpenStreetMap contributors, SRTM, OpenTopoMap (CC-BY-SA).</p>
 </div>
 </footer>
 </body>

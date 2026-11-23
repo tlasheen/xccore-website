@@ -4,15 +4,27 @@
   python tools/make_assets.py APP_ASSETS SCREENS [FONT]
 
 APP_ASSETS  the app's `Assets` folder (the logo sheet, store/feature
-            graphic, store/icon_1024.png, store/screenshots/*.png)
-SCREENS     a folder of app screenshots (1080 px wide PNGs) named as in
-            SHOTS below; the store screenshots are taken from APP_ASSETS
+            graphic, store/icon_1024.png)
+SCREENS     unused (kept for the command's shape); screenshots are made
+            with --screens below
 FONT        Sora's variable TTF (SIL Open Font Licence), subset to Latin
 
 Writes assets/img/* (WebP for browsers that take it, JPEG or PNG as the
 fallback), the favicons at the site's root and assets/fonts/sora.woff2.
 Needs Pillow, and fontTools with brotli for the font. Nothing else from
 the app is read or copied.
+
+  python tools/make_assets.py --screens DIR
+
+The carousel's and phone frames' screenshots: every DIR/<name>.png, taken
+with the app at exactly 9:16 (adb shell wm size 1080x1920), becomes
+assets/img/<name>-320/-640 .webp/.jpg at 9:16, never stretched: anything
+not 9:16 is cut to it from the centre.
+
+  python tools/make_assets.py --arabic-font CAIRO_TTF
+
+Cairo's variable TTF (SIL Open Font Licence) subset to Arabic letters,
+weight axis kept, as assets/fonts/cairo-arabic.woff2.
 """
 
 import os
@@ -23,23 +35,6 @@ from PIL import Image
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 IMG = os.path.join(ROOT, "assets", "img")
 
-# Store screenshots (Assets/store/screenshots/xccore_phone_N_1080x1920.png):
-# their site names.
-STORE = {
-    1: "modes",
-    2: "glance",
-    3: "route",
-    4: "speed",
-    5: "ppg",
-    6: "voice",
-}
-# App screenshots (SCREENS/<file>): their site names. Status and
-# navigation bars are cut off.
-SHOTS = {
-    "2_thermal_3d.png": "thermal-3d",
-    "3_xc_map.png": "xc-map",
-    "7_flight_log.png": "flight-log",
-}
 WIDTHS = (360, 720)
 
 
@@ -54,11 +49,6 @@ def save_pair(im, name, widths=WIDTHS, quality=78):
                               "JPEG", quality=quality + 4, optimize=True,
                               progressive=True)
 
-
-def cut_bars(im, top=0.035, bottom=0.03):
-    """An Android screenshot without its status and navigation bars."""
-    return im.crop((0, round(im.height * top), im.width,
-                    round(im.height * (1 - bottom))))
 
 
 def mark_from_sheet(sheet_path):
@@ -79,21 +69,68 @@ def mark_from_sheet(sheet_path):
     return out.crop(bbox)
 
 
+def make_screens(folder):
+    """Each 9:16 screenshot in [folder] at the carousel's two widths."""
+    for f in sorted(os.listdir(folder)):
+        if not f.lower().endswith(".png"):
+            continue
+        im = Image.open(os.path.join(folder, f)).convert("RGB")
+        w, h = im.size
+        if abs(w * 16 - h * 9) > 16:  # not 9:16: cut it to 9:16 from the centre
+            if w * 16 > h * 9:
+                nw = round(h * 9 / 16)
+                im = im.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
+            else:
+                nh = round(w * 16 / 9)
+                im = im.crop((0, (h - nh) // 2, w, (h - nh) // 2 + nh))
+        name = os.path.splitext(f)[0]
+        for width in (320, 640):
+            r = im.resize((width, round(width * 16 / 9)), Image.LANCZOS)
+            r.save(os.path.join(IMG, "%s-%d.webp" % (name, width)), "WEBP",
+                   quality=80, method=6)
+            r.save(os.path.join(IMG, "%s-%d.jpg" % (name, width)), "JPEG",
+                   quality=82, optimize=True, progressive=True)
+        print("screen", name)
+
+
+def arabic_font(ttf):
+    """Cairo subset to Arabic, its weight axis kept and slant pinned."""
+    from fontTools import subset
+    from fontTools.ttLib import TTFont
+    from fontTools.varLib import instancer
+    font = TTFont(ttf)
+    if "slnt" in [a.axisTag for a in font["fvar"].axes]:
+        font = instancer.instantiateVariableFont(font, {"slnt": 0})
+    tmp = os.path.join(ROOT, "assets", "fonts", "_cairo.ttf")
+    font.save(tmp)
+    out = os.path.join(ROOT, "assets", "fonts", "cairo-arabic.woff2")
+    try:
+        subset.main([
+            tmp,
+            "--unicodes=U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,"
+            "U+FE70-FEFF,U+200C-200F",
+            "--layout-features=*",
+            "--flavor=woff2",
+            "--output-file=" + out,
+        ])
+    finally:
+        os.remove(tmp)
+    print("font", out, os.path.getsize(out))
+
+
 def main(argv):
+    if len(argv) == 3 and argv[1] == "--screens":
+        make_screens(argv[2])
+        return 0
+    if len(argv) == 3 and argv[1] == "--arabic-font":
+        arabic_font(argv[2])
+        return 0
     if len(argv) < 3:
         print(__doc__)
         return 2
     assets, screens = argv[1], argv[2]
     font = argv[3] if len(argv) > 3 else None
     os.makedirs(IMG, exist_ok=True)
-
-    for n, name in STORE.items():
-        p = os.path.join(assets, "store", "screenshots",
-                         "xccore_phone_%d_1080x1920.png" % n)
-        save_pair(Image.open(p).convert("RGB"), "store-" + name)
-    for f, name in SHOTS.items():
-        save_pair(cut_bars(Image.open(os.path.join(screens, f))
-                           .convert("RGB")), "app-" + name)
 
     fg = Image.open(os.path.join(assets, "store",
                                  "feature_graphic_1024x500.png")).convert("RGB")

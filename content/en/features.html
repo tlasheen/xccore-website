@@ -1,0 +1,145 @@
+<section class="hero small">
+{{thermal}}
+<div class="wrap">
+<span class="eyebrow">Features</span>
+<h1>Everything you need in the air.</h1>
+<p class="lead">All of it is in the Android beta today. The app and its voice are in English.</p>
+</div>
+</section>
+
+<div class="wrap section">
+
+<section class="feature reveal" id="modes">
+<div>
+<span class="icon">{{icon modes}}</span>
+<h2>Four flight modes</h2>
+<p class="lead">Pick how you fly each time you open the app. It remembers your last choice.</p>
+<ul>
+<li><strong>Speed:</strong> big height above ground, speed and heading, no map. A turbulence bar and a low-height alarm: a tone, words and a red flashing edge.</li>
+<li><strong>Soaring:</strong> a live lift line ahead, green for lift and red for sink, built from your earlier passes. Kept for each site.</li>
+<li><strong>XC:</strong> the map on the glide, the 3D view in the climb, the voice coach and a thermal compass.</li>
+<li><strong>PPG:</strong> for paramotor pilots (below).</li>
+</ul>
+<p>Move, resize, add or remove widgets on the ground for each mode, and share a layout as a file.</p>
+</div>
+<div class="phone-wrap">{{phone modes|The mode screen: Speed, Soaring, XC and PPG}}</div>
+</section>
+
+<section class="feature flip reveal" id="coach">
+<div>
+<span class="icon">{{icon voice}}</span>
+<h2>Voice thermal coach</h2>
+<p class="lead">Start circling and XC Core maps the lift around you, then says what to do: <em>“Open up”</em>, <em>“Tighten”</em>, <em>“Straighten now”</em> or <em>“Centred, hold it.”</em></p>
+<p>Never the opposite correction within one circle. On a glide it notices lift (<em>“Thermal here, turn right”</em>) and leads you back to the best thermal you can still reach, corrected for drift: <em>“Thermal, 800 metres, at 2 o'clock.”</em></p>
+<ul>
+<li>How much it says (Quiet, Normal, Coach) and how often (Low, Medium, High).</li>
+<li>Separate volumes for headset and speaker, switched by itself. Headset drops out? It says so and carries on.</li>
+<li>Your phone's own speech engine, with a check for an offline English voice.</li>
+</ul>
+</div>
+<div class="phone-wrap">{{phone thermal-3d|Circling in the 3D view, with the core marked at plus 2 metres a second}}</div>
+</section>
+
+<section class="feature reveal" id="thermal-3d">
+<div>
+<span class="icon">{{icon thermal}}</span>
+<h2>3D thermal view</h2>
+<p class="lead">See the thermal you're in: your circles coloured by climb, the core at your height and which way it drifts.</p>
+<p>A wind estimate from your circling, shown with its uncertainty and hidden when it isn't reliable. In XC mode it opens by itself when you circle; in Soaring mode, tap Thermal.</p>
+</div>
+<div class="phone-wrap">{{phone thermal-3d|The 3D thermal view: circles coloured by climb, the core and the wind}}</div>
+</section>
+
+<section class="feature flip reveal" id="routes">
+<div>
+<span class="icon">{{icon route}}</span>
+<h2>Waypoint routes and the route badge</h2>
+<ul>
+<li>Type or paste waypoints (degrees and minutes, decimal, or a Google Maps link), or hold the map to drop one. Drag, rename, reorder, undo; save routes by name.</li>
+<li>A waypoint compass beside the thermal compass, in any mode.</li>
+<li>The voice counts you in from 100 metres: <em>“Waypoint 1 reached. Next: Goal, at 2 o'clock.”</em></li>
+<li>Reached waypoints go into the IGC file.</li>
+<li>After landing, a route badge with your times, square or story-sized. “Hide positions and map” keeps your spots private.</li>
+</ul>
+</div>
+<div class="phone-wrap">{{phone badge|The route complete badge with the waypoint times}}</div>
+</section>
+
+<section class="feature reveal" id="maps">
+<div>
+<span class="icon">{{icon map}}</span>
+<h2>Offline maps and terrain</h2>
+<p class="lead">Topographic maps that work with no signal.</p>
+<p>OpenTopoMap and OpenStreetMap: download a region before you go, its size shown first. Terrain heights (SRTM) download by themselves where you are, so height above ground works offline, and the thermal compass knows which thermals you can reach.</p>
+</div>
+<div class="phone-wrap">{{phone xc-map|XC mode gliding on the topographic map with the thermal compass}}</div>
+</section>
+
+<section class="feature flip reveal" id="igc">
+<div>
+<span class="icon">{{icon igc}}</span>
+<h2>IGC logging and direct XContest claims</h2>
+<p class="lead">Claim your flights on XContest straight from the app. Log in once, tap Claim.</p>
+<ul>
+<li>Takeoff and landing found by themselves, or tap Start flight. A drive or a cable car doesn't start a flight; ridge soaring doesn't end one.</li>
+<li>Every flight saved as a full IGC file, the way a dedicated logger writes it: full header, GPS and pressure altitude, one fix a second.</li>
+<li>A flight log with totals, the track coloured by climb, an altitude graph and replay. KML export for Google Earth.</li>
+<li>Replay any IGC file through the whole app, with sound, coach and 3D view.</li>
+</ul>
+<p class="note">XC Core's IGC files aren't signed yet (no G record), so XContest accepts them but scores them at 0 points for now.</p>
+</div>
+<div class="phone-wrap">{{phone flight-log|The flight log with each flight's time, height, climb and distance}}</div>
+</section>
+
+<section class="feature reveal" id="ppg">
+<div>
+<span class="icon">{{icon ppg}}</span>
+<h2>PPG mode</h2>
+<p class="lead">Climb, speed, altitude, flight time and the clock. Big. Nothing else.</p>
+<p>No map, no 3D view, no coach. The climb rate stays steady through engine vibration, and a running engine or taxiing doesn't start a flight. Large buttons. Your paramotor and engine hours go into your pilot details.</p>
+</div>
+<div class="phone-wrap">{{phone ppg|PPG mode with climb, speed, altitude, flight time and clock}}</div>
+</section>
+
+<section class="feature flip reveal" id="screen-off">
+<div>
+<span class="icon">{{icon screen}}</span>
+<h2>Made for the air, screen off</h2>
+<ul>
+<li>Vario, voice, GPS and recording keep running with the screen off or the phone locked.</li>
+<li>Headset button: one press reads your status, two repeat the last call.</li>
+<li>Spoken warnings, each with its own tone: low height, strong sink, GPS lost, barometer failure, low battery, phone too hot, headset lost.</li>
+<li>Brightness and Do Not Disturb set for the flight, put back after landing.</li>
+<li>Quiet on the ground until your flight starts. Set exactly where the climb beep and sink tone begin.</li>
+</ul>
+</div>
+<div class="phone-wrap">{{phone vario-settings|The vario and sound settings: where the climb beeps and the sink tone start}}</div>
+</section>
+
+<section class="section" id="more">
+<h2 class="reveal">And more</h2>
+<ul class="cards reveal">
+<li class="card"><span class="icon">{{icon vario}}</span><h3>A real variometer</h3><p>Barometer, GPS and accelerometer combined, so it reacts to lift at once. Calibrated to sea level by itself, or set QNH. Works on GPS alone on phones without a barometer.</p></li>
+<li class="card"><span class="icon">{{icon bluetooth}}</span><h3>External Bluetooth varios</h3><p>Use a Bluetooth vario's sensors, such as the Stodeus UltraBip. See <a href="/watches/">watches and sensors</a>.</p></li>
+<li class="card"><span class="icon">{{icon phone}}</span><h3>Sensors and permissions</h3><p>A table of your phone's sensors and how good they are, a permissions page, and import or export of all your settings.</p></li>
+<li class="card"><span class="icon">{{icon gift}}</span><h3>Free</h3><p>No ads and no purchases. XC mode is free for a limited time.</p></li>
+</ul>
+</section>
+
+</div>
+
+<section class="section alt topo">
+<div class="section-head center wrap">
+<h2>See it on screen</h2>
+</div>
+{{carousel feature-shots|Screenshots of XC Core}}
+modes | Four flight modes | The mode screen: Speed, Soaring, XC and PPG
+thermal-3d | 3D thermal view | The 3D thermal view: circles coloured by climb, the core and the wind
+xc-map | XC map and thermal compass | XC mode gliding on the topographic map with the thermal compass
+wp-reached | Waypoint reached | The waypoint reached card over the map
+badge | Route badge | The route complete badge with the waypoint times
+ppg | PPG mode | PPG mode with large numbers
+flight-log | Flight log | The flight log
+vario-settings | Vario and sound | The vario and sound settings
+{{/carousel}}
+</section>

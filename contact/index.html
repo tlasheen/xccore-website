@@ -1,14 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact and support: XC Core</title>
 <meta name="description" content="Contact XC Core&#x27;s developer, and answers to common questions.">
 <link rel="canonical" href="https://xccore.uk/contact/">
+<link rel="alternate" hreflang="en" href="https://xccore.uk/contact/">
+<link rel="alternate" hreflang="ar" href="https://xccore.uk/ar/contact/">
+<link rel="alternate" hreflang="x-default" href="https://xccore.uk/contact/">
 <meta name="theme-color" content="#0b1f38">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="XC Core">
+<meta property="og:locale" content="en_GB">
 <meta property="og:title" content="Contact and support: XC Core">
 <meta property="og:description" content="Contact XC Core&#x27;s developer, and answers to common questions.">
 <meta property="og:url" content="https://xccore.uk/contact/">
@@ -22,13 +26,15 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="lang-hint" id="lang-hint" lang="ar" dir="rtl" hidden><div class="wrap"><span>هذا الموقع متوفر باللغة العربية.</span> <a href="/ar/contact/" hreflang="ar">اعرضه بالعربية</a> <button type="button" data-dismiss>لا، شكرًا</button></div></div>
 <header class="site-header">
 <div class="wrap">
-<a class="brand" href="/"><img src="/assets/img/mark-64.png" width="30" height="32" alt=""><span><span class="xc">XC</span> <span class="core">Core</span></span></a>
-<nav class="site-nav" aria-label="Main">
+<a class="brand" href="/"><img src="/assets/img/mark-64.png" width="28" height="30" alt=""><bdi><span>XC</span> <span class="core">Core</span></bdi></a>
+<nav class="nav-desktop" aria-label="Main">
 <ul>
 <li><a href="/">Home</a></li>
 <li><a href="/features/">Features</a></li>
@@ -37,12 +43,30 @@
 <li><a href="/contact/" aria-current="page">Contact</a></li>
 </ul>
 </nav>
+<div class="header-tools">
+<nav class="lang-switch" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a href="/ar/contact/" hreflang="ar" lang="ar">العربية</a></nav>
+<details class="menu">
+<summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg><span>Menu</span></summary>
+<div class="panel">
+<nav aria-label="Main"><ul>
+<li><a href="/">Home</a></li>
+<li><a href="/features/">Features</a></li>
+<li><a href="/watches/">Watches &amp; sensors</a></li>
+<li><a href="/beta/">Join the beta</a></li>
+<li><a href="/contact/" aria-current="page">Contact</a></li>
+</ul></nav>
+<nav class="lang-switch" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a href="/ar/contact/" hreflang="ar" lang="ar">العربية</a></nav>
+</div>
+</details>
+</div>
 </div>
 </header>
 <main id="main">
 <section class="hero small">
+<svg class="thermal" viewBox="0 0 200 420" aria-hidden="true" focusable="false"><g class="ring"><ellipse cx="100" cy="380" rx="78" ry="15"/></g><g class="ring"><ellipse cx="100" cy="318" rx="62" ry="12"/></g><g class="ring"><ellipse cx="100" cy="262" rx="48" ry="10"/></g><g class="ring"><ellipse cx="100" cy="212" rx="36" ry="8"/></g><g class="ring"><ellipse cx="100" cy="170" rx="26" ry="6"/></g><path class="wing" d="M62 104c24-16 52-16 76 0" /></svg>
 <div class="wrap">
-<h1>Contact &amp; support</h1>
+<span class="eyebrow">Contact &amp; support</span>
+<h1>Talk to the pilot who builds it.</h1>
 <p class="lead">Questions, bugs or ideas: write to <a href="mailto:tlasheen@gmail.com">tlasheen@gmail.com</a>. XC Core is made by one pilot-developer, so replies can take a day or two.</p>
 </div>
 </section>
@@ -74,8 +98,8 @@
 </details>
 
 <details>
-<summary>Will XContest score my flights?</summary>
-<div><p>You can claim flights on XContest straight from the app, or share the IGC file. XC Core's files aren't signed yet (no G record), so XContest accepts them but scores them at 0 points for now.</p></div>
+<summary>Can I send my flights to XContest?</summary>
+<div><p>Yes, you can claim flights on XContest straight from the app: log in once, then tap Claim on the flight. Or share the IGC file. XC Core's files aren't signed yet (no G record), so XContest accepts them but scores them at 0 points for now.</p></div>
 </details>
 
 <details>
@@ -102,15 +126,13 @@
 </main>
 <footer class="site-footer">
 <div class="wrap">
+<div class="top">
+<a class="brand" href="/"><img src="/assets/img/mark-64.png" width="28" height="30" alt=""><bdi><span>XC</span> <span class="core">Core</span></bdi></a>
+<nav class="lang-switch" aria-label="Language"><span lang="en" aria-current="true">English</span><span class="sep" aria-hidden="true">|</span><a href="/ar/contact/" hreflang="ar" lang="ar">العربية</a></nav>
+</div>
 <p class="safety">XC Core is a flight aid, not a certified instrument. Its readings and suggestions can be wrong: keep watch outside, fly within your skills and make your own decisions.</p>
-<ul>
-<li><a href="/features/">Features</a></li>
-<li><a href="/watches/">Watches &amp; sensors</a></li>
-<li><a href="/beta/">Join the beta</a></li>
-<li><a href="/privacy/">Privacy policy and terms</a></li>
-<li><a href="/contact/">Contact</a></li>
-</ul>
-<p class="fine">© 2026 Tarek Lasheen. No cookies, no analytics, no trackers on this site. Google Play and the Google Play logo are trademarks of Google LLC. Sora font: SIL Open Font Licence. Map images in the screenshots: © OpenStreetMap contributors, SRTM, OpenTopoMap (CC-BY-SA).</p>
+<ul><li><a href="/features/">Features</a></li><li><a href="/watches/">Watches &amp; sensors</a></li><li><a href="/beta/">Join the beta</a></li><li><a href="/contact/">Contact</a></li><li><a href="/privacy/">Privacy policy and terms</a></li></ul>
+<p class="fine">© 2026 Tarek Lasheen. No cookies, no analytics, no trackers on this site. Google Play and the Google Play logo are trademarks of Google LLC. Fonts: Sora and Cairo (SIL Open Font Licence). Map images in the screenshots: © OpenStreetMap contributors, SRTM, OpenTopoMap (CC-BY-SA).</p>
 </div>
 </footer>
 </body>
