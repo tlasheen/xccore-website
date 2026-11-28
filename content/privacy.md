@@ -1,6 +1,6 @@
 # XC Core: Privacy Policy and Terms of Service
 
-Effective date: 21 November 2026
+Effective date: 28 November 2026
 
 ---
 
@@ -95,6 +95,13 @@ All of this is processed **on your phone only** and never sent to us.
 
 ### What is stored on your phone
 
+- The app's own log (since version 1.0.11): what happened while the app
+  ran, for problem reports: sensor rates, errors and crashes, the coach's
+  calls, the watch link's and the external vario's states, when
+  recordings start and end. Bluetooth and e-mail addresses are removed
+  and positions cut to about 100 m before a line is written. It is kept
+  in the app's private files, at most about 1 MB (the oldest lines are
+  dropped), and leaves the phone only in a problem report you send.
 - Your settings, including your screen layouts, your glider's polar and
   a landing point if you set one (a place on the map you choose, used
   for the glide to it).
@@ -180,6 +187,18 @@ only on this device.
   the distance, and, unless you switch on "Hide positions and map", the
   waypoints' positions and a drawing of your track (no map from a map
   provider).
+- **Reporting a problem with a flight**, only when you choose to
+  (Settings → About, or a flight's details in the Flight log): the app
+  makes one zip file with the flight's IGC file (see above: the track,
+  and your name and wing if you entered them), the app's log from 10
+  minutes before takeoff to 10 minutes after landing, your note, the
+  app's version, the phone's (or watch's) model and system version and
+  the main settings (no names, no routes, no landing point, no device
+  addresses). It shows you every file in it first, then opens your
+  e-mail app with the zip attached, addressed to XC Core's support
+  address (tlasheen@gmail.com). Nothing is sent until you send that
+  e-mail yourself; we use the report only to find and fix the problem,
+  and delete it when it is no longer needed.
 - **Claiming a flight on XContest**, only when you tap Claim on XContest:
   - **Directly from the app** (where your version offers it): the app
     sends to XContest (www.xcontest.org, over HTTPS) the flight's IGC file
